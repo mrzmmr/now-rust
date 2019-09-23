@@ -1,6 +1,6 @@
 import execa from "execa";
 
-async function downloadRustToolchain(version: string = "stable") {
+async function downloadRustToolchain(version: string = "nightly") {
 	console.log("downloading the rust toolchain");
 
 	try {
