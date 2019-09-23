@@ -18,6 +18,7 @@ async function installOpenSSL() {
 	try {
 		// need to downgrade otherwise yum can't resolve the dependencies given
 		// a later version is already installed in the machine.
+		/*
 		await execa(
 			"yum",
 			["downgrade", "-y", "krb5-libs-1.14.1-27.41.amzn1.x86_64"],
@@ -25,6 +26,7 @@ async function installOpenSSL() {
 				stdio: "inherit"
 			}
 		);
+		*/
 		await execa("yum", ["install", "-y", "openssl-devel"], {
 			stdio: "inherit"
 		});
